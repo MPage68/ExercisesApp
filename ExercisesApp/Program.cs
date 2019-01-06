@@ -16,6 +16,7 @@ namespace ExercisesApp
             GetOddFibonacciNumbersInRange(12);
             GetSumOfAllFibonacciNumbersInRange(12);
             GetSumOfAllEvenFibonacciNumbersInRange(12);
+            GetSumOfOddFibonacciNumbersInRange(12);
             Console.ReadLine();
         }
 
@@ -25,14 +26,14 @@ namespace ExercisesApp
             int previousPreviousNumber = 0;
             int currentNumber = 1;
 
-            Console.WriteLine("Display number at position " + n + " in Fibonacci sequence...\n");
+            Console.WriteLine("Display number at position " + n + " in Fibonacci sequence...");
             for(int i = 1; i < n; i++)
             {
                 previousPreviousNumber = previousNumber;
                 previousNumber = currentNumber;
                 currentNumber = previousNumber + previousPreviousNumber;
             }
-                Console.WriteLine(currentNumber + "\n");            
+                Console.WriteLine(currentNumber);            
         }
 
         public static int GetAllFibonacciNumbersInRange(int n)
@@ -41,7 +42,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display all numbers in sequence up to position " + n + " ...\n");
+            Console.WriteLine("Display all numbers in sequence up to position " + n + " ...");
             for(int i= 1; i < n; i++)
             {
                 ppn = pn;
@@ -58,7 +59,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display even numbers in range up to position " + n + " ...\n");
+            Console.WriteLine("Display even numbers in range up to position " + n + " ...");
             for(int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -79,7 +80,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display odd numbers in range up to position " + n + " ...\n");
+            Console.WriteLine("Display odd numbers in range up to position " + n + " ...");
             for(int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -101,7 +102,7 @@ namespace ExercisesApp
             int cn = 1;
             int sum = 0;
 
-            Console.WriteLine("Display the sum of numbers in range up to position " + n + " ...\n");
+            Console.WriteLine("Display the sum of numbers in range up to position " + n + " ...");
             for(int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -128,6 +129,27 @@ namespace ExercisesApp
                 cn = ppn + pn;
 
                 if (cn % 2 == 0)
+                    sum += cn;
+            }
+            Console.WriteLine(sum);
+            return sum;
+        }
+
+        public static int GetSumOfOddFibonacciNumbersInRange(int n)
+        {
+            int ppn = 0;
+            int pn = 0;
+            int cn = 1;
+            int sum = 0;
+
+            Console.WriteLine("Display sum of odd Fibonacci number in range up to " + n);
+            for(int i = 1; i < n; i++)
+            {
+                ppn = pn;
+                pn = cn;
+                cn = ppn + pn;
+
+                if (cn % 2 == 1)
                     sum += cn;
             }
             Console.WriteLine(sum);
