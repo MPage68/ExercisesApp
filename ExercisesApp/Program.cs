@@ -10,13 +10,14 @@ namespace ExercisesApp
     {
         static void Main(string[] args)
         {
-            GetFibonacciNumberInRange(2000);
+            GetFibonacciNumberInRange(24);
             GetAllFibonacciNumbersInRange(12);
             GetEvenFibonacciNumbersInRange(12);
             GetOddFibonacciNumbersInRange(12);
             GetSumOfAllFibonacciNumbersInRange(12);
             GetSumOfAllEvenFibonacciNumbersInRange(12);
             GetSumOfOddFibonacciNumbersInRange(12);
+            GetStartAndEndPointInFibonacciRange(12,24);
             Console.ReadLine();
         }
 
@@ -154,6 +155,30 @@ namespace ExercisesApp
             }
             Console.WriteLine(sum);
             return sum;
+        }
+
+        public static int GetStartAndEndPointInFibonacciRange(int start, int end)
+        {
+            int ppn = 0;
+            int pn = 0;
+            int cn = 1;
+
+            Console.WriteLine("Display the numbers at the " + start + " and " + end + " positions in the Fibonacci sequence");
+
+            for(int i = 1; i < end; i++)
+            {
+                ppn = pn;
+                pn = cn;
+                cn = ppn + pn;
+
+                if(i == start - 1)
+                {
+                    Console.WriteLine("Position 12 of the sequence is " +cn);
+                }                  
+             
+            }
+            Console.WriteLine("Position 24 of the sequence is " + cn);
+                return cn;
         }
     }
 }
