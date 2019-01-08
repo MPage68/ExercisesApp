@@ -18,6 +18,7 @@ namespace ExercisesApp
             GetSumOfAllEvenFibonacciNumbersInRange(12);
             GetSumOfOddFibonacciNumbersInRange(12);
             GetStartAndEndPointInFibonacciRange(12,24);
+            GetNumbersBetweenStartAndEndPointOfFibonacci(12,24);
             Console.ReadLine();
         }
 
@@ -34,7 +35,7 @@ namespace ExercisesApp
                 previousNumber = currentNumber;
                 currentNumber = previousNumber + previousPreviousNumber;
             }
-                Console.WriteLine(currentNumber);            
+                Console.WriteLine(currentNumber + "\n");            
         }
 
         public static int GetAllFibonacciNumbersInRange(int n)
@@ -51,6 +52,7 @@ namespace ExercisesApp
                 cn = ppn + pn;  
             Console.WriteLine(cn);
             }
+            Console.WriteLine();
             return cn;
         }
 
@@ -72,7 +74,8 @@ namespace ExercisesApp
                 Console.WriteLine(cn);
                 }
             }
-                return cn;
+            Console.WriteLine();
+            return cn;
         }
 
         public static int GetOddFibonacciNumbersInRange(int n)
@@ -93,7 +96,8 @@ namespace ExercisesApp
                     Console.WriteLine(cn);
                 }
             }
-                return cn;
+            Console.WriteLine();
+            return cn;
         }
 
         public static int GetSumOfAllFibonacciNumbersInRange(int n)
@@ -111,7 +115,7 @@ namespace ExercisesApp
                 cn = ppn + pn;
                 sum += cn;
             }
-            Console.WriteLine(sum);
+            Console.WriteLine(sum + "\n");
             return sum;
         }   
         
@@ -132,7 +136,7 @@ namespace ExercisesApp
                 if (cn % 2 == 0)
                     sum += cn;
             }
-            Console.WriteLine(sum);
+            Console.WriteLine(sum + "\n");
             return sum;
         }
 
@@ -153,7 +157,7 @@ namespace ExercisesApp
                 if (cn % 2 == 1)
                     sum += cn;
             }
-            Console.WriteLine(sum);
+            Console.WriteLine(sum + "\n");
             return sum;
         }
 
@@ -177,8 +181,31 @@ namespace ExercisesApp
                 }                  
              
             }
-            Console.WriteLine("Position 24 of the sequence is " + cn);
+            Console.WriteLine("Position 24 of the sequence is " + cn + "\n");
                 return cn;
         }
+
+        public static int GetNumbersBetweenStartAndEndPointOfFibonacci(int start, int end)
+        {
+            int ppn = 0;
+            int pn = 0;
+            int cn = 1;
+
+            Console.WriteLine("Display the numbers between " + start + " and " + end + " in the Fibonacci sequence");
+            for(int i = 1; i < end; i++)
+            {
+                ppn = pn;
+                pn = cn;
+                cn = ppn + pn;
+
+                if(i >= start)
+                {
+                    Console.WriteLine(cn);
+                }
+            }
+            Console.WriteLine();
+            return cn;
+        }
     }
+
 }
