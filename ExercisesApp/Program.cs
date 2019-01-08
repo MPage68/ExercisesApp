@@ -21,6 +21,7 @@ namespace ExercisesApp
             GetNumbersBetweenStartAndEndPointOfFibonacci(12, 24);
             GetEvenNumbersBetweenStartAndEndPointOfFibonacci(12,24);
             GetOddNumbersBetweenStartAndEndPointOfFibonacci(12,24);
+            GetSumOFNumbersBetweenStartAndEndPointOfFibonacci(12,24);
             Console.ReadLine();
         }
 
@@ -251,6 +252,29 @@ namespace ExercisesApp
             }
             Console.WriteLine();
             return cn;
+        }
+
+        public static int GetSumOFNumbersBetweenStartAndEndPointOfFibonacci(int start, int end)
+        {
+            int ppn = 0;
+            int pn = 0;
+            int cn = 1;
+            int sum = 0;
+
+            Console.WriteLine("Display the sum of all number between position " + start + " and " + " postion " + end + " in the Fibonacci sequence:\n");
+            for(int i = 1; i < end; i++)
+            {
+                ppn = pn;
+                pn = cn;
+                cn = ppn + pn;
+
+                if(cn >= start)
+                {
+                    sum += cn;
+                }
+            }
+            Console.WriteLine(sum + "\n");
+            return sum;
         }
     }
 }
