@@ -10,7 +10,7 @@ namespace ExercisesApp
     {
         static void Main(string[] args)
         {
-            GetFibonacciNumberInRange(24);
+            GetFibonacciNumberInRange(2000);
             GetAllFibonacciNumbersInRange(12);
             GetEvenFibonacciNumbersInRange(12);
             GetOddFibonacciNumbersInRange(12);
@@ -29,7 +29,7 @@ namespace ExercisesApp
             int previousPreviousNumber = 0;
             int currentNumber = 1;
 
-            Console.WriteLine("Display number at position " + n + " in Fibonacci sequence.\n");
+            Console.WriteLine("Display number at position " + n + " in Fibonacci sequence:\n");
             for (int i = 1; i < n; i++)
             {
                 previousPreviousNumber = previousNumber;
@@ -45,7 +45,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display all numbers in sequence up to position " + n + ".\n");
+            Console.WriteLine("Display all numbers in sequence up to position " + n + ":\n");
             for (int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -63,7 +63,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display even numbers in range up to position " + n + " .\n");
+            Console.WriteLine("Display even numbers in range up to position " + n + ":\n");
             for (int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -85,7 +85,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display odd numbers in range up to position " + n + " .\n");
+            Console.WriteLine("Display odd numbers in range up to position " + n + ":\n");
             for (int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -108,7 +108,7 @@ namespace ExercisesApp
             int cn = 1;
             int sum = 0;
 
-            Console.WriteLine("Display the sum of numbers in range up to position " + n + " .\n");
+            Console.WriteLine("Display the sum of numbers in range up to position " + n + ":\n");
             for (int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -127,7 +127,7 @@ namespace ExercisesApp
             int cn = 1;
             int sum = 0;
 
-            Console.WriteLine("Display sum of all even numbers in Fibonacci sequence up to " + n + "\n");
+            Console.WriteLine("Display sum of all even numbers in Fibonacci sequence up to " + n + ":\n");
             for (int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -148,7 +148,7 @@ namespace ExercisesApp
             int cn = 1;
             int sum = 0;
 
-            Console.WriteLine("Display sum of odd Fibonacci number in range up to " + n + "\n");
+            Console.WriteLine("Display sum of odd Fibonacci number in range up to " + n + ":\n");
             for (int i = 1; i < n; i++)
             {
                 ppn = pn;
@@ -168,7 +168,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display the numbers at the " + start + " and " + end + " positions in the Fibonacci sequence\n");
+            Console.WriteLine("Display the numbers at the " + start + " and " + end + " positions in the Fibonacci sequence:\n");
 
             for (int i = 1; i < end; i++)
             {
@@ -192,7 +192,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display the numbers between " + start + " and " + end + " in the Fibonacci sequence\n");
+            Console.WriteLine("Display the numbers between " + start + " and " + end + " in the Fibonacci sequence:\n");
             for (int i = 1; i < end; i++)
             {
                 ppn = pn;
@@ -214,7 +214,7 @@ namespace ExercisesApp
             int pn = 0;
             int cn = 1;
 
-            Console.WriteLine("Display even numbers between position " + start + " and " + end + " in the Fibonacci sequence\n");
+            Console.WriteLine("Display even numbers between position " + start + " and " + end + " in the Fibonacci sequence:\n");
             for (int i = 1; i < end; i++)
             {
                 ppn = pn;
